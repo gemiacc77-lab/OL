@@ -850,21 +850,21 @@ a, button, .filter-btn, .portfolio-item, .pricing-card, .faq-question, .hamburge
     content: ''; 
     position: absolute; 
     top: 0; 
-    left: -100%; 
+    left: 0;  /* MODIFIED */
     width: 100%; 
-    height: 2px; 
-    background: linear-gradient(90deg, transparent, var(--accent-light), transparent); 
-    /* UPDATED: Uses smooth transition variable */
-    transition: left var(--transition-smooth); 
+    height: 4px; /* MODIFIED */
+    background: linear-gradient(90deg, var(--accent-purple), var(--accent-light)); /* MODIFIED */
+    transform: scaleX(0); /* ADDED */
+    transition: transform var(--transition-smooth); /* MODIFIED */
 }
 
 .industry-card:hover::before { 
-    left: 100%; 
+    transform: scaleX(1); /* MODIFIED */
 }
 
 .industry-card:hover { 
-    transform: translateY(-10px); 
-    box-shadow: 0 20px 40px rgba(0,0,0,0.2); 
+    transform: translateY(-8px); /* MODIFIED */
+    box-shadow: 0 15px 30px rgba(138, 43, 226, 0.2); /* MODIFIED */
 }
 
 .industry-icon { 
