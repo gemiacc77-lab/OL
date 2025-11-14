@@ -72,7 +72,7 @@
     
 
     <header class="main-header" id="header">
-        <a href="/home/" class="logo"><img src="https://i.ibb.co/ZpvD9mSj/OPTILINE-LOGO.webp" alt="OPTILINE Logo"></a>
+        <a href="/home/" class="logo"><img src="../assets/OPTILINE-LOGO.webp" alt="OPTILINE Logo"></a>
         <nav>
             <ul class="nav-links">
                 <li><a href="/home/">Home</a></li>
@@ -100,7 +100,6 @@
                     <form class="contact-form" name="contact" method="POST" id="contact-form">
                         <h2>Project Inquiry</h2>
                         
-                        <!-- Token Status Display -->
                         <div id="token-status" class="token-status" style="display: none;">
                             <span id="token-message"></span>
                         </div>
@@ -117,12 +116,10 @@
                             <textarea id="message" name="message" required placeholder="Tell us what's on your mind or what you'd like to discuss..."></textarea>
                         </div>
                         
-                        <!-- Hidden Token Field -->
                         <div class="form-group hidden">
                             <input type="hidden" id="token" name="token">
                         </div>
                         
-                        <!-- Honeypot Field -->
                         <div style="display:none;" aria-hidden="true">
                             <label>Don't fill this out if you're human:</label>
                             <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
@@ -131,7 +128,6 @@
                         <div class="form-submit-container">
                             <button type="submit" class="cta-button" id="submit-button" disabled>Preparing Secure Connection...</button>
                             
-                            <!-- Countdown Timer -->
                             <div id="countdown-timer" class="countdown-timer">
                                 You can submit another inquiry in: <span id="countdown-display">120</span> seconds
                             </div>
@@ -195,7 +191,7 @@
     <footer class="main-footer">
         <div class="container footer-content">
             <div class="footer-about">
-                <a href="/home/" class="logo"><img src="https://i.ibb.co/ZpvD9mSj/OPTILINE-LOGO.webp" loading="lazy" alt="OPTILINE Logo"></a>
+                <a href="/home/" class="logo"><img src="../assets/OPTILINE-LOGO.webp" loading="lazy" alt="OPTILINE Logo"></a>
                 <p>OPTILINE is a creative agency dedicated to building the brands of tomorrow. We partner with visionaries to create work that matters.</p>
             </div>
             <div class="footer-links">
