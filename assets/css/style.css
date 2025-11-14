@@ -1170,6 +1170,40 @@ a, button, .filter-btn, .portfolio-item, .pricing-card, .faq-question, .hamburge
     margin-right: 10px; 
 }
 
+/* --- Payment Icons (Pricing Page) --- */
+.payment-icons-wrapper {
+    margin-top: 3rem; /* Space above the icons */
+}
+
+.payment-icons-wrapper h4 {
+    color: var(--text-gray);
+    margin-bottom: 1.5rem; /* Space between title and icons */
+    letter-spacing: 2px;
+    font-family: var(--font-main);
+    font-size: clamp(0.9rem, 2vw, 1rem);
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.payment-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem; /* Space between icons */
+    flex-wrap: wrap;
+}
+
+.payment-icons i {
+    font-size: 2.5rem; /* Size of the icons */
+    color: var(--text-gray); /* Subtle icon color */
+    transition: color var(--transition-fast), transform var(--transition-fast);
+}
+
+.payment-icons i:hover {
+    color: var(--text-light); /* Brighter on hover */
+    transform: scale(1.1); /* Pop effect on hover */
+}
+
 /* --- FAQ Accordion (Shared) --- */
 .faq-accordion { 
     max-width: 800px; 
