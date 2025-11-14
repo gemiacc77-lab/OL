@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Sitemap: https://optiline.online/sitemap.xml
+
+# Prevent search engines from indexing the secret project brief page
+Disallow: /project-submit-a91z7p/
