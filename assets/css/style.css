@@ -118,7 +118,7 @@ a, button, .filter-btn, .portfolio-item, .pricing-card, .faq-question, .hamburge
     left: 0; 
     width: 100%; 
     z-index: 1000; 
-    padding: 12px 5%; 
+    padding: 10px 5%; /* MODIFIED: Was 12px */
     display: flex; 
     justify-content: space-between; 
     align-items: center; 
@@ -131,12 +131,12 @@ a, button, .filter-btn, .portfolio-item, .pricing-card, .faq-question, .hamburge
 .main-header.scrolled { 
     background-color: rgba(10, 4, 26, 0.7); 
     backdrop-filter: blur(12px); 
-    padding: 8px 5%; 
+    padding: 6px 5%; /* MODIFIED: Was 8px */
     box-shadow: 0 4px 30px rgba(0,0,0,0.3); 
 }
 
 .logo img { 
-    height: 55px; /* Slightly smaller than original 65px */
+    height: 60px; /* MODIFIED: Was 55px */
     transition: transform var(--transition-fast); 
 }
 
@@ -1516,11 +1516,11 @@ a, button, .filter-btn, .portfolio-item, .pricing-card, .faq-question, .hamburge
     /* REMOVED: All .custom-cursor, body, and a/button cursor styles */
 
     .main-header { 
-        padding: 8px 5%; 
+        padding: 6px 5%; /* MODIFIED: Was 8px */
     }
     
     .logo img { 
-        height: 50px; 
+        height: 55px; /* MODIFIED: Was 50px */
     }
     
     .nav-links { 
@@ -1664,4 +1664,3 @@ a, button, .filter-btn, .portfolio-item, .pricing-card, .faq-question, .hamburge
         grid-template-columns: 1fr; 
     }
 }
-
