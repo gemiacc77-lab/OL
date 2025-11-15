@@ -192,8 +192,17 @@ a, button, .filter-btn, .portfolio-item, .pricing-card, .faq-question, .hamburge
     min-height: 100vh; 
     display: flex; 
     align-items: center; 
+    justify-content: center; /* ADDED: To center hero content */
     text-align: center; 
     padding: 120px 0 60px; 
+    position: relative; /* ADDED: For icon container */
+    overflow: hidden; /* ADDED: To contain icons */
+}
+
+/* ADDED: Hero content z-index to stay above icons */
+.hero-content {
+    position: relative;
+    z-index: 2;
 }
 
 .hero h1 { 
@@ -209,6 +218,66 @@ a, button, .filter-btn, .portfolio-item, .pricing-card, .faq-question, .hamburge
     max-width: 750px; 
     margin: 0 auto 2.5rem; 
 }
+
+/* ADDED: Floating icons styles */
+.hero-floating-icons {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Behind content */
+    pointer-events: none; /* Non-interactive */
+}
+
+.hero-floating-icons i {
+    position: absolute;
+    color: var(--accent-purple);
+    opacity: 0; /* Start invisible */
+    font-size: 50px;
+    animation: float 20s linear infinite;
+}
+
+/* ADDED: Keyframes for floating animation */
+@keyframes float {
+    0% {
+        transform: translateY(110vh) rotate(0deg);
+        opacity: 0;
+    }
+    10%, 90% {
+        opacity: 0.1; /* Very transparent */
+    }
+    100% {
+        transform: translateY(-110vh) rotate(720deg);
+        opacity: 0;
+    }
+}
+
+/* ADDED: Staggering for each icon */
+.hero-floating-icons .fa-crown {
+    top: 50%; 
+    left: 15%;
+    font-size: 60px;
+    animation-duration: 18s;
+    animation-delay: -5s;
+}
+
+.hero-floating-icons .fa-film {
+    top: 50%;
+    left: 80%;
+    font-size: 40px;
+    animation-duration: 22s;
+    animation-delay: -2s;
+}
+
+.hero-floating-icons .fa-desktop {
+    top: 50%;
+    left: 45%;
+    font-size: 50px;
+    animation-duration: 15s;
+    animation-delay: -10s;
+}
+
 
 .page-hero { 
     padding: 160px 0 80px; 
@@ -318,14 +387,9 @@ a, button, .filter-btn, .portfolio-item, .pricing-card, .faq-question, .hamburge
     will-change: transform, box-shadow;
 }
 
-/* --- 
-  --- هذا هو التعديل الذي طلبته --- 
-  ---
-*/
 .service-card:hover { 
     transform: translateY(-10px); 
-    /* تمت إضافة التوهج البنفسجي هنا */
-    box-shadow: 0 15px 30px rgba(0,0,0,0.2), 0 0 25px var(--glow-color); 
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2), 0 0 25px var(--glow-color); /* UPDATED: Added glow */
     border-color: var(--accent-light); 
 }
 
@@ -1501,16 +1565,41 @@ a, button, .filter-btn, .portfolio-item, .pricing-card, .faq-question, .hamburge
     margin-bottom: 0.7rem; 
 }
 
+/* --- 
+  --- هذا هو التعديل الذي طلبته --- 
+  ---
+*/
 .footer-links a { 
     color: var(--text-gray); 
     text-decoration: none; 
-    transition: color var(--transition-fast), padding-left var(--transition-fast); 
+    transition: color var(--transition-fast); /* MODIFIED: Removed padding-left transition */
     font-size: 0.95rem; 
+    position: relative; /* ADDED */
+    padding-bottom: 5px; /* ADDED */
+    display: inline-block; /* ADDED: To make padding and position work correctly */
+}
+
+/* ADDED: New rule for the underline */
+.footer-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background: var(--accent-light);
+    transition: width var(--transition-smooth);
 }
 
 .footer-links a:hover { 
     color: var(--accent-light); 
-    padding-left: 8px; 
+    padding-left: 0; /* MODIFIED: Removed 8px */
+}
+
+/* ADDED: New rule for the hover state */
+.footer-links a:hover::after {
+    width: 100%;
 }
 
 .copyright { 
