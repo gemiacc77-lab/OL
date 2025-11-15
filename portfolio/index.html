@@ -25,7 +25,9 @@
     <meta property="twitter:description" content="A showcase of our best work and creative solutions.">
     <meta property="twitter:image" content="https://i.ibb.co/ZpvD9mSj/OPTILINE-LOGO.webp">
     
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" as="style" onload="this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"></noscript>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -59,7 +61,7 @@
 
         <section class="section" id="portfolio-gallery">
             <div class="container">
-                <div class="filter-buttons anim-group">
+                <div class="filter-buttons anim-group" role="group" aria-label="Portfolio Filters">
                     <button class="filter-btn active" data-filter="all">All</button>
                     <button class="filter-btn" data-filter="branding">Brand Identity</button> 
                     <button class="filter-btn" data-filter="video">Video Production</button>
@@ -67,7 +69,7 @@
                 </div>
                 
                  <div class="portfolio-list"> 
-                    <div class="portfolio-item anim-group" data-category="marketing">
+                    <article class="portfolio-item anim-group" data-category="marketing">
                         <div class="item-content">
                             <p class="category">Digital Experience</p>
                             <h3>Quantum Fintech App</h3>
@@ -76,8 +78,8 @@
                         <div class="item-image">
                             <img src="https://images.unsplash.com/photo-1522199755839-a2bacb67c546?q=80&w=800&auto=format&fit=crop" loading="lazy" alt="Quantum Fintech App (DX) App shown on a laptop and phone">
                         </div>
-                    </div>
-                    <div class="portfolio-item anim-group" data-category="video">
+                    </article>
+                    <article class="portfolio-item anim-group" data-category="video">
                         <div class="item-content">
                             <p class="category">Video Production</p>
                             <h3>Nova Drones Launch</h3>
@@ -86,8 +88,8 @@
                         <div class="item-image">
                             <img src="https://images.unsplash.com/photo-1516245834210-c4c1427873ab?q=80&w=800&auto=format&fit=crop" loading="lazy" alt="Nova Drones product flying over mountains">
                         </div>
-                    </div>
-                    <div class="portfolio-item anim-group" data-category="branding">
+                    </article>
+                    <article class="portfolio-item anim-group" data-category="branding">
                         <div class="item-content">
                             <p class="category">Brand Identity</p>
                             <h3>Nexus Corporate Rebrand</h3>
@@ -96,8 +98,8 @@
                         <div class="item-image">
                             <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=800&auto=format&fit=crop" loading="lazy" alt="A team of professionals in a meeting discussing a corporate rebrand">
                         </div>
-                    </div> 
-                    <div class="portfolio-item anim-group" data-category="branding">
+                    </article> 
+                    <article class="portfolio-item anim-group" data-category="branding">
                         <div class="item-content">
                             <p class="category">Brand Identity</p>
                             <h3>Tech Startup Identity</h3>
@@ -106,8 +108,8 @@
                         <div class="item-image">
                             <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=800&auto=format&fit=crop" loading="lazy" alt="Creative session for a startup identity project">
                         </div>
-                    </div>
-                    <div class="portfolio-item anim-group" data-category="video">
+                    </article>
+                    <article class="portfolio-item anim-group" data-category="video">
                         <div class="item-content">
                             <p class="category">Video Production</p>
                             <h3>Social Media Campaign</h3>
@@ -116,8 +118,8 @@
                         <div class="item-image">
                             <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80" loading="lazy" alt="People watching a social media campaign video on a tablet">
                         </div>
-                    </div>
-                    <div class="portfolio-item anim-group" data-category="marketing">
+                    </article>
+                    <article class="portfolio-item anim-group" data-category="marketing">
                         <div class="item-content">
                             <p class="category">Digital Experience</p>
                             <h3>Enterprise E-commerce</h3>
@@ -126,8 +128,8 @@
                         <div class="item-image">
                             <img src="https://images.unsplash.com/photo-1556740738-b6a63e2775d2?q=80&w=800&auto=format&fit=crop" loading="lazy" alt="A person using an e-commerce platform on a computer">
                         </div>
-                    </div>
-                    <div class="portfolio-item anim-group" data-category="marketing">
+                    </article>
+                    <article class="portfolio-item anim-group" data-category="marketing">
                         <div class="item-content">
                             <p class="category">Digital Experience</p>
                             <h3>SaaS Dashboard Redesign</h3>
@@ -136,7 +138,7 @@
                         <div class="item-image">
                             <img src="https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?q=80&w=800&auto=format&fit=crop" loading="lazy" alt="Clean and modern UI of a SaaS dashboard">
                         </div>
-                    </div> 
+                    </article> 
                 </div>
             </div>
         </section>
