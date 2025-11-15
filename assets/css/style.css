@@ -318,9 +318,14 @@ a, button, .filter-btn, .portfolio-item, .pricing-card, .faq-question, .hamburge
     will-change: transform, box-shadow;
 }
 
+/* --- 
+  --- هذا هو التعديل الذي طلبته --- 
+  ---
+*/
 .service-card:hover { 
     transform: translateY(-10px); 
-    box-shadow: 0 15px 30px rgba(0,0,0,0.2); 
+    /* تمت إضافة التوهج البنفسجي هنا */
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2), 0 0 25px var(--glow-color); 
     border-color: var(--accent-light); 
 }
 
@@ -337,7 +342,7 @@ a, button, .filter-btn, .portfolio-item, .pricing-card, .faq-question, .hamburge
 
 .service-card:hover .service-icon { 
     transform: scale(1.1); 
-}}
+}
 
 .pricing-card h3 { 
     font-size: 1.6rem; 
